@@ -59,7 +59,7 @@ if has_egl
 endif
 
 libhook = shared_library(
-  'mali-hook',
+  'mali_hook',
   'hook.c',
   c_args : libhook_cflags,
   include_directories : libhook_inc,
@@ -68,7 +68,7 @@ libhook = shared_library(
   install : true,
   version : mali_version)
 
-libhook_ldflags = ['-L${libdir}', '-lmali-hook']
+libhook_ldflags = ['-L${libdir}', '-lmali_hook']
 
 # A dummy library to ensure that the hook library would not be removed as unused
 libinjector = static_library(
